@@ -20,9 +20,10 @@ import Button from "@material-ui/core/Button";
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import IconButton from "@material-ui/core/IconButton";
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { red } from '@material-ui/core/colors';
 import LongMenu from "./menus/ProductMenu";
+import Badge from '@material-ui/core/Badge';
+
 const useStyles = makeStyles({
     root: {
         maxWidth: 320,
@@ -65,7 +66,7 @@ const Product: React.FC<productProps> = () => {
     useEffect(() => {
         return () => {
             axios
-                .get("https://fakestoreapi.com/products/8")
+                .get("https://fakestoreapi.com/products/1")
                 .then((res: { data: ProductType }) => {
                     setProduct(res.data);
                 });
@@ -91,7 +92,7 @@ const Product: React.FC<productProps> = () => {
                             size="small"
                             icon={<FavoriteIcon fontSize="inherit"/>}
                         />}
-                        action={<LongMenu/>}
+                       
                     />
                     <Image style={{backgroundImage:`url(${product?.image})`}} />
                         {/*<img src='/playstation.jpg' alt="product-1"/>*/}
@@ -123,7 +124,9 @@ const Product: React.FC<productProps> = () => {
                         <Tooltip title="Ajouter" aria-label="Ajouter" style={{marginLeft: "auto"}}>
                         <IconButton  onClick={handleClickVariant('success')} size="medium"
                         >
+                            <Badge badgeContent={count} color="primary">
                             <ShoppingCartOutlinedIcon/>
+                            </Badge>
                         </IconButton>
                     </Tooltip>
                 </CardActions>
