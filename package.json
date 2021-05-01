@@ -9,10 +9,17 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@types/axios": "^0.14.0",
+    "@types/styled-components": "^5.1.9",
+    "axios": "^0.21.1",
     "clsx": "^1.1.1",
     "next": "10.0.9",
+    "notistack": "^1.0.6",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "styled-components": "^5.2.3"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",
