@@ -1,22 +1,22 @@
-import React from "react";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import React from 'react'
 
-import Link from "../src/config/Link";
+import Rating from "@material-ui/lab/Rating";
+
 
 
 export default function Index() {
+   const [value, setValue] = React.useState<number | null>(2);
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Next.js with TypeScript example
-        </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-      </Box>
-    </Container>
+    <div className=" h-screen w-screen bg-gray-700">
+      <div>
+        <Rating
+          name="simple-controlled"
+          value={value}
+          onChange={(_, newValue) => {
+            setValue(newValue);
+          }}
+        />
+      </div>
+    </div>
   );
 }

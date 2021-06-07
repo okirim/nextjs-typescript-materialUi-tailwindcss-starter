@@ -1,8 +1,7 @@
 
 ```
-git clone git@github.com:okirim/nextjs-typescript-materialUi-starter.git
+git clone git@github.com:okirim/nextjs-typescript-materialUi-starter.
+cd nextjs-typescript-materialUi-starter
 npm install 
 npm run dev
-# or
-yarn dev
 ```
